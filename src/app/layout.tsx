@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Navigation } from "./components/navigation";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -27,7 +28,15 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+
+        <header className="bg-green-950 text-white p-4 text-center">
+          {/* <p>Welcome to Next.js 15 Crash Course</p> */}
+          <Navigation/>
+        </header>
         {children}
+        <footer className="bg-green-950 text-white p-2 text-center">
+          <p>Copyright-logo Nick-Lemy 2025</p>
+        </footer>
       </body>
     </html>
   );
